@@ -1,0 +1,7 @@
+apple
+avocado
+banana
+kiwi
+lemon
+orange
+tomato
