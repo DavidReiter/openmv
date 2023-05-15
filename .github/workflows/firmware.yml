@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        target: [OPENMV2, OPENMV3, OPENMV4, OPENMV4P, PORTENTA, OPENMVPT, NICLAV, NANO33, ARDUINO_NANO_RP2040_CONNECT]
+        target: [NICLAV]
       fail-fast: false
     steps:
     - name: '⏳ Checkout repository'
@@ -126,7 +126,7 @@ jobs:
       run: source tools/ci.sh && ci_package_firmware_development
 
     - name: '🧹 Delete old release'
-      uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      uses: dev-drprasad/delete-tag-and-release@v0.2.1
       with:
         delete_release: true
         tag_name: development
